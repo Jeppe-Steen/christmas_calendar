@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.page-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .countdown-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background-color: #222;
+
+        header {
+            width: 30vw;
+            text-align: center;
+            border-bottom: 1.5px solid #dfdfdf;;
+
+            h1 {
+                text-transform: uppercase;
+                color: #dfdfdf;
+            }
+        }
+
+        article {
+            display: flex;
+            flex-direction: row;
+            height: 10vh;
+            width: 30vw;
+
+            p {
+               width: fit-content;
+               height: 100%;
+               margin: auto;
+               display: flex;
+               flex-direction: column;
+               text-align: center;
+               justify-content: center;
+               color: #dfdfdf;
+               text-transform: uppercase;
+            }
+        }
+    }
+    .gate-container {
+        width: 100%;
+        height: 100%;
+        background-image: url("/assets/media/christmasPhone.jpg");
+        background-size: cover;
+        background-position: center;
+
+        display: none;
+        grid-template: repeat(6, 1fr) / repeat(4, 1fr);
+
+        @media (min-width: 1200px) {
+            width: 30%;
+            height: 90%;
+            box-shadow: 0 0 20px #00000030;
+        }
+
+        article {
+            background-color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #333;
+            }
+
+            &.open {
+                color: transparent;
+                background-color: transparent;
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+//this is for snowflakes
+#snowflakeContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+
+    .snowflake {
+        position: fixed;
+        background-color: #CCC;
+        user-select: none;
+        z-index: 1000;
+        pointer-events: none;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+    }
+}

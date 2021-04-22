@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.page-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page-container .countdown-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: #222;
+}
+
+.page-container .countdown-container header {
+  width: 30vw;
+  text-align: center;
+  border-bottom: 1.5px solid #dfdfdf;
+}
+
+.page-container .countdown-container header h1 {
+  text-transform: uppercase;
+  color: #dfdfdf;
+}
+
+.page-container .countdown-container article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 10vh;
+  width: 30vw;
+}
+
+.page-container .countdown-container article p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #dfdfdf;
+  text-transform: uppercase;
+}
+
+.page-container .gate-container {
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/media/christmasPhone.jpg");
+  background-size: cover;
+  background-position: center;
+  display: none;
+  -ms-grid-rows: (1fr)[6];
+  -ms-grid-columns: (1fr)[4];
+      grid-template: repeat(6, 1fr)/repeat(4, 1fr);
+}
+
+@media (min-width: 1200px) {
+  .page-container .gate-container {
+    width: 30%;
+    height: 90%;
+    -webkit-box-shadow: 0 0 20px #00000030;
+            box-shadow: 0 0 20px #00000030;
+  }
+}
+
+.page-container .gate-container article {
+  background-color: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+.page-container .gate-container article:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+.page-container .gate-container article.open {
+  color: transparent;
+  background-color: transparent;
+}
+
+.page-container .gate-container article.open:hover {
+  background-color: transparent;
+}
+
+#snowflakeContainer {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: none;
+}
+
+#snowflakeContainer .snowflake {
+  position: fixed;
+  background-color: #CCC;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: 1000;
+  pointer-events: none;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
